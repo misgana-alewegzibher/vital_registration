@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>User Data Analaysis</title>
+
+    <meta name="author" content="Codeconvey" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap" rel="stylesheet">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css'>
+
+    <!--Only for demo purpose - no need to add.-->
+    <link rel="stylesheet" href="../../../../assets/css/demo.css" />
+    
+	    <link rel="stylesheet" href="../../../../assets/css/userDataStyle.css">
+</head>
+<body>
+<header class="ScriptHeader">
+  
+
+    <div class="rt-container">
+    	<div class="col-rt-12">
+        	<div class="rt-heading">
+            	<h1>User Request And Details Information of User</h1>
+                <p style="color: rgba(209, 3, 3, 0.836);">Please by checking the information in the below(
+                     if it's correct information click approve button)
+                     <br/>
+              (if Information is not correct click decline)
+                   </p>
+            </div>
+        </div>
+    </div>
+</header>
+<section>
+
+    <div class="rt-container">
+          <div class="col-rt-12">
+              <div class="Scriptcontent">
+              
+<!-- User Profile -->
+<% bdata.forEach(element=> {
+  var pid= element.uid;
+  var check = element.status;
+
+  %>
+<div class="student-profile py-4">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="card shadow-sm">
+          <div class="card-header bg-transparent text-center">
+            <img class="profile_img" src="../../../<%=element.userImgF%>" alt="student dp">
+            <h3><%= element.name%> <%= element.fathers_name %> <%=element.grand_fathers_name%></h3>
+          </div>
+          <div class="card-body">
+            <p class="mb-0"><strong class="pr-1">ID:</strong><%= pid %></p>
+            <p class="mb-0"><strong class="pr-1">Name:</strong><%= element.name%> <%= element.fathers_name %> <%=element.grand_fathers_name%></p>
+            <p class="mb-0"><strong class="pr-1">Requested for Birth Certificate</strong></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-8">
+        <div class="card shadow-sm">
+          <div class="container">
+            <div class="card-group">
+      
+                <!--bootstrap card with 3 horizontal images-->
+                <div class="row">
+                    <div class="card col-md-6">
+                        <img class="card-img-top" src="../../../<%=element.userImgF%>">
+      
+                        <div class="card-body">
+                            <h3 class="card-title">User Front ID Picture</h3>
+                        </div>
+                    </div>
+      
+                    <div class="card col-md-6">
+                        <img class="card-img-top" src="../../../<%=element.userImgB%>">
+                          
+                        <div class="card-body">
+                            <h3 class="card-title text-primary">User Back ID Picture</h3>
+                        </div>
+                    </div>
+                      
+                    <!-- <div class="card col-md-4">
+                        <img class="card-img-top" src=
+    "https://media.geeksforgeeks.org/wp-content/cdn-uploads/20190623192118/Left-Bar-DSA-Self.png">
+                          
+                        <div class="card-body">
+                            <h3 class="card-title">DSA</h3>
+                            <p class="card-text">DS & Algo Course</p>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+          <!-- <img src="..." class="rounded float-left" alt="...">
+         <img src="..." class="rounded float-right" alt="..."> -->
+        </div>
+        </div>
+
+
+
+      <div class="col-lg-12 mt-5" id="detail_id">
+        <div class="card shadow-sm">
+          <div class="card-header bg-transparent border-0">
+            <h3 class="mb-0"><i class="far fa-clone pr-1"></i>General Information</h3>
+          </div>
+          <div class="card-body pt-0">
+            <table class="table table-bordered">
+              <tr>
+                <th width="30%">NAME</th>
+                <td width="2%">:</td>
+                <td><%= element.name%> <%= element.fathers_name %> <%=element.grand_fathers_name%></td>
+              </tr>
+              <tr>
+                <th width="30%">MOTHER FULL NAME</th>
+                <td width="2%">:</td>
+                <td><%=element.mothers_full_name %></td>
+              </tr>
+              <tr>
+                <th width="30%">PLACE/COUNTRY OF BIRTH</th>
+                <td width="2%">:</td>
+                <td><%=element.place_or_country_of_birth%></td>
+              </tr>
+              <tr>
+                <th width="30%">REGION/CITY ADMINSTRATION</th>
+                <td width="2%">:</td>
+                <td><%=element.region_or_city_adminstration%></td>
+              </tr>
+              <tr>
+                <th width="30%">ZONE/CITY ADMINSTRATION</th>
+                <td width="2%"></td>
+                <td><%=element.zone_or_city_adminstration%></td>
+              </tr>
+              <tr>
+                <th width="30%">GENDER</th>
+                <td width="2%"></td>
+                <td><%=element.gender%></td>
+              </tr>
+              <tr>
+                <th width="30%">CITIZENSHIP STATUS</th>
+                <td width="2%">:</td>
+                <td><%=element.citizenship_status%></td>
+              </tr>
+              <tr>
+                <th width="30%">DATE of BIRTH</th>
+                <td width="2%"></td>
+                <td><%=element.date_of_birthday.toLocaleDateString()%></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+          <div style="height: 26px"></div>
+        <div class="card shadow-sm">
+          <div class="card-header bg-transparent border-0">
+            <h3 class="mb-0"><i class="far fa-clone pr-1"></i>Other Information</h3>
+          </div>
+          <div class="card-body pt-0">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class=" flex-row align-self-end col-sm-12 text-center mt-5 ml-auto">
+          <% if(check === 'requested'){ %>
+            <a href="/login/request/reqdetail/breq/approve/<%=pid%>" style="text-decoration: none;">
+              <button id="btnSearch" class="  btn btn-primary btn-md center-block" Style="width: 100px;"  >Approve</button>
+              </a> 
+              <a href="/login/request/reqdetail/breq/decline/<%=pid%>" style="text-decoration: none;">
+              <button id="btnClear" class="btn btn-danger btn-md center-block" Style="width: 100px;"  >Decline</button>
+             </a>
+              <% } %>
+          
+              <% if(check === 'approved'){ %>
+                  <button id="btnSearch" class="  btn btn-primary btn-md center-block" Style="width: 200px; background-color: green;" OnClick="btnSearch_Click" >Approved Succeessfully</button>
+                  <% } %>
+
+                  <% if(check === 'declined'){ %>
+                    <a href="" style="text-decoration: none;">
+                      <button id="btnSearch" class="  btn btn-primary btn-md center-block" Style="width: 200px; background-color: green;" OnClick="btnSearch_Click" >Request Declined</button>
+                      </a> <% } %>
+         
+        
+            </div>
+    </div>
+
+    </div>
+  </div>
+</div>
+<!-- partial -->
+           
+    		</div>
+		</div>
+    </div>
+    <% });%>
+
+</section>
+     
+
+
+    <!-- Analytics -->
+
+	</body>
+</html>

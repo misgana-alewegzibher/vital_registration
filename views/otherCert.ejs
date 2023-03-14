@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../../assets/css/style.css" />
+    <link rel="stylesheet" href="../../assets/css/fontawesome.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+
+
+    
+
+    <div class="row">
+      <div class="col">
+        <!--  navbar section -->
+
+        <nav class="navbar navbar-expand-lg navbar-dark menu shadow fixed-top">
+          <div class="container">
+            <a class="navbar-brand" href="#"></a>
+            <img
+              src="/images/0.png"
+              alt="image not found"
+              class="img-fluid"
+              width="40px"
+            />
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div
+              class="collapse navbar-collapse justify-content-end"
+              id="navbarNav"
+            >
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a
+                    class="nav-link active"
+                    aria-current="page"
+                    href="/index.html"
+                    >Home</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="login.html">login</a>
+                </li>
+                <!-- 
+        <li class="nav-item">
+          <a class="nav-link" href="#">Testimonials</a>
+        </li>
+         -->
+                <!-- <li class="nav-item">
+                  <a class="nav-link" href="#faq">Faq</a>
+                </li> -->
+                <!--  
+        <li class="nav-item">
+          <a class="nav-link disabled">portfolio</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link disabled">contact</a>
+        </li>
+-->
+              </ul>
+
+              <button type="button" class="rounded-pill btn-rounded">
+                +251 11 157 3357
+                <span><i class="fas fa-phone-alt fa-flip-horizontal"></i></span>
+              </button>
+            </div>
+          </div>
+        </nav>
+
+        <!-- navbar end-->
+      </div>
+    </div>
+
+    <section class="choice"> -->
+        
+        
+        <form action="yesChoice/<%=usrId%>"  method="get">
+
+      <!-- <form action="deathChoice/<%=usrId%>"> -->
+            <div class="container-md py-5 h-100">
+                <div
+                  class="row d-flex justify-content-center align-items-center h-100"
+                >
+       
+            <div class="col-lg-6  col-md-6 col-sm-3 col-xs-3 mb-5">
+              <div class="card bg-dark text-white" style="border-radius: 1rem">
+                <div class="card-body p-5 text-center">
+                  <div class="mb-md-5 mt-md-4 pb-5">
+                    <button
+                    type="submit"
+                    id="deathbtn"
+                    class="border-0 rounded-4"
+                  >
+                    <img
+                      class="img-fluid"
+                      src="/images/ok-g90a496f61_1280.png"
+                      alt="yes "
+                    />
+                  </button>
+                  <p class="text-uppercase m-3">click if the DECEASED has previous data records </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </form>
+
+    <form action="noChoice/<%=usrId%>"  method="get">
+            <div class="col-lg-6  col-md-6 col-sm-3 col-xs-3 mb-5">
+                <div class="card bg-dark text-center text-white" style="border-radius: 1rem">
+                  <div class="card-body p-5 text-center">
+                    <div class="mb-md-5 mt-md-4 pb-5 justify-content-center align-items-center">
+                      <button
+                      type="submit"
+                      id="deathbtn"
+                      class="border-0 rounded-4"
+                    >
+                      <img
+                        class="img-fluid"
+                        src="/images/false-gda5ca2cf2_1280.png"
+                        alt="birth image "
+                      />
+                    </button>
+                    <p class="text-uppercase m-3">click if the DECEASED has no previous data records </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+</div> </div>
+            </div>
+            <!-- </form>  - ->
+     </section>
+    <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+    crossorigin="anonymous"
+  ></script>
+  </body>
+</html>

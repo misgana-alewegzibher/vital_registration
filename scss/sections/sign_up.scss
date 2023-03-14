@@ -1,0 +1,6 @@
+@use '../custom' as * ;
+@use '../components/mixins' as * ;
+
+.sign_up{
+    @include gradient;
+}

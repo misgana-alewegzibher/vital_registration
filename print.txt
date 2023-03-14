@@ -1,0 +1,10 @@
+document.getElementById("sidebar-toggle-btn").addEventListener("click",function() {
+    document.getElementById("sidebar").classList.toggle("active");
+    document.getElementById("ddd").classList.toggle("active");
+    
+})
+const printbtn=document.getElementById('print');
+
+printbtn.addEventListener('click',function(){
+    print();
+})

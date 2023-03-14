@@ -1,0 +1,14 @@
+html {
+  background-color: rgba(23, 109, 23, 0.753);
+}
+h1 {
+  margin: 12rem 12rem;
+  font-size: 4rem;
+  background-color: rgba(19, 74, 78, 0.856);
+  border-radius: 10rem;
+  border: solid 0.5rem rgba(75, 34, 34, 0.863);
+  padding: 2rem;
+  color: rgb(9, 9, 19);
+  text-align: center;
+  text-shadow: 0px 0px 20px rgb(209, 198, 198);
+}

@@ -1,0 +1,16 @@
+<img src="data:<%=element.userImg.contentType%>;base64,<%=element.userImg.data.toString('base64')%>" alt="profile_pic"
+
+<!-- <img src="/<%=element.userImg.contentType%>;base64,<%=element.userImg.data.toString('base64')%>" alt="profile_pic"
+                                                style="width: 50px"> -->
+<!-- <img src="<%= element.userImg %>" alt="profile_pic"
+                                                style="width: 50px"> -->
+
+                                                <img src="data:image/<%=element.userImg.contentType%>;base64,<%=element.userImg.data.toString('base64') %>" alt="profile_pic"
+                                                <img src="<%=element.userImg%>" alt="profile_pic"
+
+
+#Package that are used to verify the user email
+- nodemailer
+- email-verification
+
+

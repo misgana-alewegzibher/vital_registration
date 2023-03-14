@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Birth Request Page</title>
+
+    <link rel="stylesheet" href="../../assets/css/style.css" />
+    <link rel="stylesheet" href="../../assets/css/fontawesome.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../assets/vendors/css/glightbox.min.css" />
+  </head>
+  <body>
+    <!-- <h1>What is wrong with u</h1> -->
+    <section class="birthform">
+      <!-- <form action="birthChoice/birthInfo/<%=usrId%>" enctype="multipart/form-data" method="POST"> -->
+      <form
+        action="birthInfo/<%=usrId%>"
+        enctype="multipart/form-data"
+        method="POST"
+      >
+        <div class="container py-5 h-100">
+          <div
+            class="row d-flex justify-content-center align-items-center h-100"
+          >
+            <div class="col-12">
+              <div class="card bg-dark text-white" style="border-radius: 1rem">
+                <div class="card-body p-5 text-center">
+                  <!-- upload childs photo (birthday)  -->
+
+                  <div class="container col-md-6">
+                    <div class="mb-5">
+                      <label for="Image" class="form-label"
+                        >Upload Your Front ID Picture
+                      </label>
+
+                      <input
+                        class="form-control"
+                        type="file"
+                        name="bUserImg"
+                        id="birthpic1"
+                        accept="image/*"
+                        onchange="preview()"
+                      />
+
+                      <!-- future misgana repurpose button to submitt  -->
+                    </div>
+                    <img id="frame1" src="" class="img-fluid" />
+                  </div>
+
+                  <div class="container col-md-6">
+                    <div class="mb-5">
+                      <label for="Image" class="form-label">
+                        Upload Your Back ID Picture
+                      </label>
+
+                      <input
+                        class="form-control"
+                        type="file"
+                        name="bUserImg2"
+                        id="birthpic2"
+                        accept="image/*"
+                        onchange="preview()"
+                      />
+
+                      <!-- future misgana repurpose button to submitt  -->
+
+                      <div class="m-3">
+                        <!-- <button
+                          onclick="clearImage()"
+                          class="btn btn-outline-light btn-lg px-5"
+                        >
+                          Click me
+                        </button> -->
+                      </div>
+                    </div>
+                    <img id="frame1" src="" class="img-fluid" />
+                  </div>
+
+                  <div class="mb-md-5 mt-md-4 pb-5">
+                    <h2 class="fw-bold mb-2 text-uppercase">birth</h2>
+                    <p class="text-white-50 mb-5">
+                      Please enter your birthday information
+                    </p>
+                    <div class="row">
+                      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="form-outline form-white mb-4">
+                          <input
+                            type="text"
+                            id="birthtext1"
+                            name="birthtext1"
+                            minlength="5"
+                            maxlength="20"
+                            required
+                            class="form-control form-control-lg"
+                          />
+                          <label class="form-label" for="typeEmailX"
+                            >NAME</label
+                          >
+                        </div>
+                      </div>
+                      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="form-outline form-white mb-4">
+                          <input
+                            type="text"
+                            id="birthtext2"
+                            name="birthtext2"
+                            required
+                            class="form-control form-control-lg"
+                          />
+                          <label class="form-label" for="typeEmailX"
+                            >FATHERS NAME</label
+                          >
+                        </div>
+                      </div>
+
+                      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="form-outline form-white mb-4">
+                          <input
+                            type="text"
+                            id="birthtext3"
+                            name="birthtext3"
+                            required
+                            class="form-control form-control-lg"
+                          />
+                          <label class="form-label" for="typeEmailX"
+                            >GRAND FATHER'S NAME</label
+                          >
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="form-outline form-white mb-4">
+                          <input
+                            type="text"
+                            id="birthtext4"
+                            name="birthtext4"
+                            required
+                            class="form-control form-control-lg"
+                          />
+                          <label class="form-label" for="typeEmailX"
+                            >MOTHERS FULL NAME</label
+                          >
+                        </div>
+                      </div>
+
+                      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="form-outline form-white mb-4">
+                          <input
+                            type="text"
+                            id="birthtext5"
+                            name="birthtext5"
+                            required
+                            class="form-control form-control-lg"
+                          />
+                          <label class="form-label" for="typeEmailX"
+                            >PLACE/COUNTRY OF BIRTH</label
+                          >
+                        </div>
+                      </div>
+
+                      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="form-outline form-white mb-4">
+                          <input
+                            type="text"
+                            id="birthtext6"
+                            name="birthtext6"
+                            required
+                            class="form-control form-control-lg"
+                          />
+                          <label class="form-label" for="typeEmailX"
+                            >REGION/CITY ADMINSTRATION</label
+                          >
+                        </div>
+                      </div>
+
+                      <div class="col-lg-12 col-md-12col-sm-12 col-xs-12">
+                        <div class="form-outline form-white mb-4">
+                          <input
+                            type="text"
+                            id="birthtext7"
+                            name="birthtext7"
+                            required
+                            class="form-control form-control-lg"
+                          />
+                          <label class="form-label" for="typeEmailX"
+                            >ZONE/CITY ADMINSTRATION</label
+                          >
+                        </div>
+                      </div>
+
+                      <!-- <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                          <div class="form-outline form-white mb-4">
+                            <input
+                              type="text"
+                              id="birthtext8"
+                              name="birthtext8"
+                              required
+                              class="form-control form-control-lg"
+                            />
+                            <label class="form-label" for="typeEmailX"
+                              >GENDER</label
+                            >
+                          </div> -->
+
+
+                          
+                        </div>
+
+
+
+
+<!-- Default radio -->
+<div class="row text-center justify-content mx-5">
+<div class="form-check m-1 col-4 text-center px-5">
+  <input class="form-check-input" type="radio" name="birthgender" id="birthgender1" value="male"/>
+  <label class="form-check-label" for="flexRadioDefault1"> MALE </label>
+</div>
+
+<!-- Default checked radio -->
+<div class="form-check col-4 text-center">
+  <input class="form-check-input" type="radio" name="birthgender" id="birthgender2" checked value="female"/>
+  <label class="form-check-label" for="flexRadioDefault2"> FEMALE </label>
+</div>
+
+
+
+<div class="form-check m-1 col-4 text-center px-5">
+  <input class="form-check-input" type="radio" name="citizengender" id="citizengender1" value="male"/>
+  <label class="form-check-label" for="flexRadioDefault1"> CITIZEN </label>
+</div>
+
+<!-- Default checked radio -->
+<div class="form-check col-4 text-center">
+  <input class="form-check-input" type="radio" name="citizengender" id="citizengender2" checked value="female"/>
+  <label class="form-check-label" for="flexRadioDefault2"> FOREIGNER </label>
+</div>
+</div>
+
+                        <div class="row">
+                          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="p-sm-1">
+                              <label for="birthday">DATE OF BIRTHDAY</label>
+                            </div>
+                            <input
+                              type="date"
+                              id="birthdaycl1"
+                              name="birthdaycl1"
+                              value="2012-12-12"
+                              min="1900-12-12"
+                              max="2023-02-24"
+                            />
+                          </div>
+                          <!-- 
+                          <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                            <div class="p-sm-1">
+                              <label for="birthday"
+                                >DATE OF BIRTHDAY REGISTRATION
+                              </label>
+                            </div>
+
+                            <input
+                              type="date"
+                              id="birthdaycl2"
+                              name="birthdaycl2"
+                              value="2012-12-12"
+                            />
+                          </div> -->
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row text-center justify-content-center align-items-center ">
+                      <div class="col-3">
+                    <button
+                      class="btn btn-outline-light btn-lg px-5 m-3"
+                      type="submit"
+                    >
+                      SUBMIT
+                    </button>
+                  </div>
+
+                    <div
+                      class="d-flex justify-content-center text-center mt-4 pt-1"
+                    >
+                      <a
+                        href="https://www.facebook.com/wesagn.kunet/"
+                        class="text-white"
+                        ><i class="fab fa-facebook-f fa-lg"></i
+                      ></a>
+                      <a href="#!" class="text-white"
+                        ><i class="fab fa-twitter fa-lg mx-4 px-2"></i
+                      ></a>
+                      <a href="#!" class="text-white"
+                        ><i class="fab fa-google fa-lg"></i
+                      ></a>
+                    </div>
+                    <div class="m-3">
+                      <p class="mb-0">
+                        Go back to the main page
+                        <a href="/index.html" class="text-white"
+                          ><i
+                            class="fa-solid fa-house-user m-1 text-warning"
+                          ></i
+                        ></a>
+                      </p>
+                    </div>
+                  </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </section>
+
+    <!-- javascritp for birthday photo upload  -->
+
+    <script>
+      function preview() {
+        frame1.src = URL.createObjectURL(event.target.files[0]);
+      }
+      function clearImage() {
+        document.getElementById("birthpic1").value = null;
+        frame1.src = "";
+      }
+    </script>
+  </body>
+</html>

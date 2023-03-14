@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+	<link rel="stylesheet" href="../assets/css/style.css">
+	<link rel="stylesheet" href="../assets/css/user.css">
+
+    <link rel="stylesheet" href="../assets/css/userProfileStyle.css">
+	<link rel="stylesheet" href="../assets/css/fontawesome.css">
+	<link rel="stylesheet" href="../assets/css/userNotfy.css">
+
+	<link rel="stylesheet" href="../assets/vendors/css/glightbox.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.10.2/lottie.min.js" integrity="sha512-fTTVSuY9tLP+l/6c6vWz7uAQqd1rq3Q/GyKBN2jOZvJSLC5RjggSdboIFL1ox09/Ezx/AKwcv/xnDeYN9+iDDA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <title>User Profile</title>
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark menu shadow fixed-top">
+		<div class="container">
+		  <a class="navbar-brand" href="#"></a>
+		  <img src="../images/0.png" alt="image not found"  class="img-fluid" width="40px" >
+		  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		  </button>
+		  <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+			<ul class="navbar-nav">
+			  <li class="nav-item">
+				<a class="nav-link active" aria-current="page" href="/index.html">Home</a>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link" href="login.html">login</a>
+			  </li>
+			  <!-- 
+			  <li class="nav-item">
+				<a class="nav-link" href="#">Testimonials</a>
+			  </li>
+			   -->
+			  <li class="nav-item">
+				<a class="nav-link" href="#faq">Faq</a>
+			  </li>
+			  <!--  
+			  <li class="nav-item">
+				<a class="nav-link disabled">portfolio</a>
+			  </li>
+			  
+			  <li class="nav-item">
+				<a class="nav-link disabled">contact</a>
+			  </li>
+	-->
+			</ul>
+	
+			<button type="button" class="rounded-pill btn-rounded">+251 11 157 3357 <span><i class="fas fa-phone-alt fa-flip-horizontal"></i></span></button>
+		  </div>
+		</div>
+	  </nav>
+<div class="container" style="margin-top: 62px;">
+		<% userData.forEach(element=> {
+			var pid= element.uid;
+			%>
+	
+    <div class="row profile">
+		<div class="col-md-3">
+			<div class="profile-sidebar">
+				<!-- SIDEBAR USERPIC -->
+				<div class="user-top">
+				<div class="profile-userpic">
+					<img src="../assets/admin_asset/profile.png" class="img-responsive" alt="">
+				</div>
+				<!-- END SIDEBAR USERPIC -->
+				<!-- SIDEBAR USER TITLE -->
+				<div class="profile-usertitle">
+					<div class="profile-usertitle-name">
+						<span><%=pid %></span>  	
+						<span><%=element.name %></span>  
+
+					</div>
+				</div>
+					<!-- <div class="profile-usertitle-job">
+						Developer
+					</div> -->
+				</div>
+				<!-- END SIDEBAR USER TITLE -->
+				<!-- SIDEBAR BUTTONS -->
+				<!-- <div class="profile-userbuttons">
+					<button type="button" class="btn btn-success btn-sm">Follow</button>
+					<button type="button" class="btn btn-danger btn-sm">Message</button>
+				</div> -->
+				<!-- END SIDEBAR BUTTONS -->
+				<!-- SIDEBAR MENU -->
+				<div class="profile-usermenu" >
+					
+				
+					<ul class="nav" style="flex-direction: column;">
+						<li class="active">
+							<a href="#">
+							<i class="glyphicon glyphicon-home"></i>
+							Overview </a>
+						</li>
+						
+						<li>
+							<a href="/login/request/<%=pid%>">
+								<!-- <img src="../assets/admin_asset/request-btn.png" alt="" srcset=""> -->
+							<i class="glyphicon glyphicon-send"></i>
+							Send Request</a>
+						</li>
+						<li>
+							<li>
+
+							<li>
+							<a href="./index.html">
+							<i class="glyphicon glyphicon-user"></i>
+							Logout </a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-9">
+
+<div class="profile-content">
+	
+		<% if(birthid === 0){ %>
+	<div class="page-not-found">
+            <div class="profile-notfound" id="profile-notfoundid" style="max-width: 300px;margin: auto;" >
+			</div>
+			<center><h2>There is no request is send yet</h2></center>
+			<!-- <a href="#" class="btn btn-primary btn-lg disabled" role="button" aria-disabled="true">Primary link</a> -->
+			<!-- <button type="button" class="btn btn-lg btn-primary" disabled>Primary button</button> -->
+			<div class="text-center">
+				<button type="button" class="btn btn-primary .btn-sm " style="background-color: #1580eb;
+				"> <a href="/login/request/<%=pid%>" style="font-size: 15px; text-decoration: none; color: cornsilk; ">Send Request Now
+				</a>
+			</button>
+			  </div>
+            <!-- <button><a href="http://">Send The Request</a></button> -->
+		</div>
+		<% } %>
+
+		<% if(birthid !== 0){ %>
+		<% bdata.forEach(element=> {
+			var pid= element.uid;
+			%>
+        <div class="birth-found">
+			<div class="container d-flex justify-content-center">
+				<div class="card mt-5 p-3">
+					<div class="media">
+						  <img src="../assets/user.png" class="mr-3" style="width: 20px; height: 20px; ">
+						  <div class="media-body">
+							<span><h4 class="mt-2 mb-0">Your Request for the Birth certificate <%=brthstatus %> </h4></span>
+							<% if(brthstatus === "was on Pending"){ %>
+
+							<span>	<a class="btn" href="#" style="font-size: 15px;"><i class="icon-edit"></i> Edit</a></span>
+							<span class="text" style="font-size: 12px;"> <%=element.date_of_birthday_registration.toDateString();
+								%></span>
+
+							<% } %>
+
+						  </div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<% });%>
+			<% } %>
+
+
+			<% if(mrgid !== 0){ %>
+				<% mrgData.forEach(element=> {
+					var pid= element.uid;
+					%>
+				<div class="mrg-found">
+					<!-- <h1>Here is where for birth info</h1> -->
+					<div class="container d-flex justify-content-center">
+						<div class="card mt-5 p-3">
+							<div class="media">
+								  <img src="../assets/user.png" class="mr-3" style="width: 20px; height: 20px; ">
+								  <div class="media-body">
+									<span><h4 class="mt-2 mb-0">Your Request for the Marriage certificate <%=mrgstatus%> </h4></span>
+								<% if(mrgstatus === "was on Pending"){ %>
+									<span>	<a class="btn" href="#" style="font-size: 15px;"><i class="icon-edit"></i> Edit</a></span>
+									<% } %>
+									<!-- <span class="text" style="font-size: 12px;"> <%=element.date_of_marriage_registration.toDateString();%></span> -->
+
+								  </div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<% });%>
+
+					<% } %>
+
+		<% if(dvcid !== 0){ %>
+			<% dvcData.forEach(element=> {
+				var pid= element.uid;
+				%>
+			<div class="birth-found">
+				<!-- <h1>Here is where for birth info</h1> -->
+				<div class="container d-flex justify-content-center">
+					<div class="card mt-5 p-3">
+						<div class="media">
+							  <img src="../assets/user.png" class="mr-3" style="width: 20px; height: 20px; ">
+							  <div class="media-body">
+								<span><h4 class="mt-2 mb-0">Your Request for the Divorce certificate was on pending </h4></span>
+							<span>	<a class="btn" href="#" style="font-size: 15px;"><i class="icon-edit"></i> Edit</a> </span>
+	
+								<small class="text">Mar 20,2020</small>
+							  </div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<% });%>
+
+				<% } %>
+
+				<% if(childIdColl[0] !== 0){ %>
+					<% for(var i=0; i < childDataColl.length; i++) { %>
+
+						<% childDataColl[i].forEach(element=> {
+							var pid= element.uid;
+							%>
+					<div class="birth-found">
+						<!-- <h1>Here is where for birth info</h1> -->
+						<div class="container d-flex justify-content-center">
+							<div class="card mt-5 p-3">
+								<div class="media">
+									  <img src="../assets/user.png" class="mr-3" style="width: 20px; height: 20px; ">
+									  <div class="media-body">
+										<span><h4 class="mt-2 mb-0">Your Request for the Birth certificate for your child <strong><%=element.name%> <br/> </strong> with Id <strong><%=element.uid%> </strong><%=childStatusColl[i]%></h4></span>
+										<% if(childStatusColl[i] === "was on Pending"){ %>
+											<span>	<a class="btn" href="#" style="font-size: 15px;"><i class="icon-edit"></i> Edit</a></span>
+											<% } %>
+			
+										<small class="text">Mar 20,2020</small>
+									  </div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<% });%>
+					<% } %>		
+						<% } %>
+
+
+
+				<% if(dthIdColl[0] !== 0){ %>
+					<% for(var i=0; i < deathData.length; i++) { %>
+
+						<% deathData.forEach(element=> {
+							var pid= element.uid;
+							%>
+					<div class="birth-found">
+						<!-- <h1>Here is where for birth info</h1> -->
+						<div class="container d-flex justify-content-center">
+							<div class="card mt-5 p-3">
+								<div class="media">
+									  <img src="../assets/user.png" class="mr-3" style="width: 20px; height: 20px; ">
+									  <div class="media-body">
+										<span><h4 class="mt-2 mb-0">Your Request for the Death certificate for <strong><%=element.deceased_name%> <br/> <%=element.fathers_name%>  </strong> <%=dthStatusColl[i]%></h4></span>
+										<% if(dthStatusColl[i] === "was on Pending"){ %>
+											<span>	<a class="btn" href="#" style="font-size: 15px;"><i class="icon-edit"></i> Edit</a></span>
+											<% } %>
+			
+										<small class="text">Mar 20,2020</small>
+									  </div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<% });%>
+					<% } %>		
+						<% } %>
+            </div>
+		</div>
+	</div>
+	<% });%>
+
+</div>
+<br>
+<br>
+<script src="../assets/js/userScript.js"></script>
+</body>
+</html>

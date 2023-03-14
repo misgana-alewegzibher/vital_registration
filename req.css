@@ -1,0 +1,12 @@
+.notification-card{
+    display: flex;
+    
+}
+.card-img{
+    height: 20px;
+    width: 20px;
+}
+.card-imgsrc{
+    border:2px solid rgb(212, 233, 120) ;
+    border-radius: 50%;
+}

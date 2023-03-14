@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,
+				initial-scale=1.0">
+    <title>Requested Page</title>
+
+    <link rel="stylesheet" href="../assets/css/admin_style.css">
+    <link rel="stylesheet" href="../assets/css/admin_responsive.css">
+    <!-- <link rel="stylesheet" href="../assets/css/bstyle.css"> -->
+    <link rel="stylesheet" href="../assets/css/req.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
+    </script>
+    <script>
+
+        /* $(document).ready(function(){
+            $(".button_selected .button1").click(function(){
+                $(".dropdown").toggleClass("active");
+            })
+        });
+        $(document).ready(function(){
+            $(".button_selected .button2").click(function(){
+                $(".dropdown").toggleClass("active");
+            })
+        });
+        $(document).ready(function(){
+            $(".button_selected .button3").click(function(){
+                $(".dropdown").toggleClass("active");
+            })
+        });
+        $(document).ready(function(){
+            $(".button_selected .button4").click(function(){
+                $(".dropdown").toggleClass("active");
+            })
+        }); */
+
+        function fun() {
+            var bnt1 = document.getElementsById('btn1_id');
+            document.getElementsByClassName('dropdown').style.display = 'block';
+
+        }
+    </script>
+
+
+</head>
+
+<body>
+
+    <!-- for header part -->
+    <header>
+
+        <div class="logosec">
+            <div class="logo">Vital Registration System</div>
+            <img src="../assets/admin_asset/headerbtn.png" class="icn menuicn" id="menuicn" alt="menu-icon">
+        </div>
+
+    </header>
+
+    <div class="main-container" id="main_id">
+        <div class="navcontainer">
+            <nav class="nav">
+                <div class="nav-upper-options">
+                    <div class="nav-option option1">
+                        <img src="../assets/admin_asset/rectangle.png" class="nav-img" alt="dashboard">
+
+                        <h3> Dashboard</h3>
+                    </div>
+
+                    <div class="nav-option option6">
+                        <img src="../assets/admin_asset/request-btn.png" class="nav-img" alt="settings">
+                        <h3>Request</h3>
+                    </div>
+
+                    <div class="nav-option logout">
+                        <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183321/7.png" class="nav-img"
+                          alt="logout" />
+                          <a href="/index.html" style="text-decoration: none;">
+                        <h3>Logout</h3>
+                    </a>
+                      </div>
+
+                </div>
+            </nav>
+        </div>
+        <div class="main">
+
+            <div class="searchbar2">
+                <input type="text" name="" id="" placeholder="Search">
+                <div class="searchbtn">
+                    <img src="../assets/admin_asset/search.png"
+                        class="icn srchicn" alt="search-button">
+                </div>
+            </div>
+
+            <div class="report-container">
+                <div class="wrapper">
+                    <div class="notification_wrap">
+                        <div class="report-header">
+
+                            <div class="button_list">
+                                <div class="button_selected">
+                                    <button class="button button1" id="btn-1" onclick="changer(0)">Birth</button>
+                                    <button class="button button2" onclick="changer(1)">Death</button>
+                                    <button class="button button3"onclick="changer(2)">Marriage</button>
+                                    <button class="button button4"onclick="changer(3)">Divorce</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dropdown" style="display: none;" id="dropdown_birth">
+                            <% bdata.forEach(element=> {
+                                var pid= element.uid;
+                                %>            
+                                <a href="/login/request/reqdetail/breq/<%=pid%>" style="text-decoration: none;" target="_blank">
+                                    <div class="notify_item">
+                                        <div class="notify_img">
+                                           
+                                                <img src="<%=element.userImgF%>" alt="profile_pic"
+                                                style="width: 50px">
+                                        </div>
+                                        <div class="notify_info">
+                                            <p>
+                                                <%= pid %> <span>
+                                                        <%= element.name %>
+                                                    </span> <span>Requested for</span> <span>Birth Certificate</span>
+                                            </p>
+                                            <span class="notify_time">
+                                                <%= element.date_of_birthday_registration%> minutes ago
+                                            </span>
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <% });%>
+                        </div>
+
+                        <div class="dropdown" style="display: none;" id="dropdown_death">
+                            <% dth_data.forEach(element=> {
+                                var pid= element.uid;
+                                %>
+                                <a href="/login/request/reqdetail/dthreq/<%=pid %>" style="text-decoration: none;">
+                                    <div class="notify_item">
+                                        <div class="notify_img">
+                                            
+                                                <img src="<%= element.userImg %>" alt="profile_pic"
+                                                style="width: 50px">
+                                        </div>
+                                        <div class="notify_info">
+                                            <p>
+                                                <%= pid %> <span>
+                                                        <%= element.name %>
+                                                    </span> <span>Requested for</span> <span>Death Certificate</span>
+                                            </p>
+                                            <span class="notify_time">
+                                                <%= element.date_of_death_registration%> minutes ago
+                                            </span>
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <% });%>
+                        </div>
+
+                        <div class="dropdown" style="display: none;" id="dropdown_marriage">
+                            <% mrg_data.forEach(element=> {
+                                var pid= element.rid;
+                                %>
+                                <a href="/login/request/reqdetail/mrgreq/<%=pid %>" style="text-decoration: none;">
+                                    <div class="notify_item">
+                                        <div class="notify_img">
+                                            <img src="../assets/admin_asset/not_3.png" alt="profile_pic"
+                                                style="width: 50px">
+                                        </div>
+                                        <div class="notify_info">
+                                            <p>
+                                                <%= pid %> <span>
+                                                        <%= element.name %>
+                                                    </span> <span>Requested for</span> <span>Marriage Certificate</span>
+                                            </p>
+                                            <span class="notify_time">
+                                                <%= element.date_of_birthday_registration%> minutes ago
+                                            </span>
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <% });%>
+                        </div>
+
+
+
+                        <div class="dropdown" style="display: none;" id="dropdown_divorce">
+                            <% dvc_data.forEach(element=> {
+                                var pid= element.rid;
+                                %>
+                                <a href="/login/request/reqdetail/dvcreq/<%=pid %>" style="text-decoration: none;">
+                                    <div class="notify_item">
+                                        <div class="notify_img">
+                                            <img src="../assets/admin_asset/not_3.png" alt="profile_pic"
+                                                style="width: 50px">
+                                        </div>
+                                        <div class="notify_info">
+                                            <p>
+                                                <%= pid %> <span>
+                                                        <%= element.name %>
+                                                    </span> <span>Requested for</span> <span>Divorce Certificate</span>
+                                            </p>
+                                            <span class="notify_time">
+                                                <%= element.date_of_birthday_registration%> minutes ago
+                                            </span>
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <% });%>
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </div>
+
+            <script>
+                function changer(index) {
+                    if (index == 0) {
+                        document.getElementById('dropdown_death').style.display = 'none';
+                        document.getElementById('dropdown_marriage').style.display = 'none';
+                        document.getElementById('dropdown_divorce').style.display = 'none';
+                        document.getElementById('dropdown_birth').style.display = 'block';
+                    }
+                    if (index == 1) {
+                        document.getElementById('dropdown_marriage').style.display = 'none';
+                        document.getElementById('dropdown_divorce').style.display = 'none';
+                        document.getElementById('dropdown_birth').style.display = 'none';
+                        document.getElementById('dropdown_death').style.display = 'block';
+                    }
+                    if (index == 2) {
+                        document.getElementById('dropdown_death').style.display = 'none';
+                        document.getElementById('dropdown_divorce').style.display = 'none';
+                        document.getElementById('dropdown_birth').style.display = 'none';
+                        document.getElementById('dropdown_marriage').style.display = 'block';
+                        //document.getElementById('dropdown_death').style.display = 'block';
+                    }
+                    if (index == 3) {
+                        document.getElementById('dropdown_death').style.display = 'none';
+                        document.getElementById('dropdown_marriage').style.display = 'none';
+                        document.getElementById('dropdown_birth').style.display = 'none';
+                        document.getElementById('dropdown_divorce').style.display = 'block';
+                        //document.getElementById('dropdown_death').style.display = 'block';
+                    }
+
+
+                }
+
+            </script>
+
+            <script src="../assets/js/admin_script.js"></script>
+
+</body>
+
+</html>

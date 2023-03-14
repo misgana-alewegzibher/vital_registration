@@ -1,0 +1,80 @@
+            // const counts = {};
+            // // const sampleArray = ['a', 'a', 'b', 'c'];
+            // selectedMonth.forEach(function (x) {
+            //   counts[x] = (counts[x] || 0) + 1;
+            // });
+
+            // counts.forEach(function(x){
+            //   console.log("Here is count:>>"+counts[x]);
+
+            // });
+
+            //   var date = "2021-02-07T22:50:23.511+0000";
+            //  var result =  await User.aggregate([
+            //     { "$match": { "user_reg_date": {$lt:"2023-02-07T22:50:23.511+0000"}} },
+
+            //   { 
+            //      $project:
+            //  {
+            //    year: { $year:  ["$date", 1, 1] },
+            //   //  month: { $month: $user_reg_date },
+            //   //  day: { $dayOfMonth: $user_reg_date },
+            //   //  hour: { $hour: $user_reg_date },
+            //   //  minutes: { $minute: date },
+            //   //  seconds: { $second: "$date" },
+            //   //  milliseconds: { $millisecond: "$date" },
+            //   //  dayOfYear: { $dayOfYear: "$date" },
+            //   //  dayOfWeek: { $dayOfWeek: "$date" },
+            //   //  week: { $week: "$date" }
+            //  }
+            // }
+            //   ],
+            //   // function( err, data ) {
+
+            //   //   if ( err )
+            //   //     throw err;
+
+            //   //   console.log("Result==>> "+ JSON.stringify( data, undefined, 2 ) );
+
+            //   // }
+            // );
+            // // console.log("Result==>>"+JSON.stringify(result, undefined, 2));
+
+            //const aggCursor = coll.aggregate(pipeline);
+            //for await (const doc of aggCursor) {
+            // console.log(">>>>>>>>"+pipeline);
+            //}
+
+
+            //  var totalYearlyPopulation =await User.aggregate(
+            //     [
+            //       {
+            //         $project:
+            //           {
+            //             _id: 0,
+            //             dateParts: { $dateToParts: { date: "2021-02-07T22:50:23.511+0000" } }
+            //           }
+            //       },
+            //       {
+            //         $project:
+            //           {
+            //             birthMonth: "$dateParts.month"
+            //           }
+            //       }
+            //     ]
+            //   );
+
+            console.log("Now:" + typeof (thisTime));
+            // console.log("startDate :>>"+from.toISOString());
+            // console.log("endDate :>>"+to);
+
+
+            // alert(strBuilder.join(""));
+            // console.log("Total YearPop:>>"+JSON.stringify(totalYearlyPopulation));
+
+
+
+/*
+      
+*/
+

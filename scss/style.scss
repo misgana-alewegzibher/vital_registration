@@ -1,0 +1,27 @@
+@use "custom";
+
+// import the components
+
+@use "components/animations";
+@use "components/buttons";
+@use "components/mixins";
+@use "components/typography";
+
+// import the sections
+
+@use "sections/companies";
+@use "sections/faq";
+@use "sections/footer";
+@use "sections/getstarted";
+@use "sections/intro";
+@use "sections/navbar";
+@use "sections/portfolio";
+@use "sections/services";
+@use "sections/testimonials";
+@use "sections/login";
+@use "sections/sign_up";
+@use "sections/login_admin";
+@use "sections/user";
+@use "sections/_user1";
+@use "sections/_choice";
+@use "sections/admin";

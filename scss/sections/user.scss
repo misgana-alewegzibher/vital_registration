@@ -1,0 +1,17 @@
+@use "../custom" as *;
+@use "../components/mixins" as *;
+
+.birthform {
+  @include gradient;
+}
+
+.deathform {
+  @include gradient;
+}
+
+.marriageform {
+  @include gradient;
+}
+.divorceform {
+  @include gradient;
+}

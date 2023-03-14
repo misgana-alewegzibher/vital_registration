@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>User Data Analaysis</title>
+
+    <meta name="author" content="Codeconvey" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap" rel="stylesheet">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css'>
+
+    <!--Only for demo purpose - no need to add.-->
+    <link rel="stylesheet" href="../../../../assets/css/demo.css" />
+    
+	    <link rel="stylesheet" href="../../../../assets/css/userDataStyle.css">
+</head>
+<body>
+<header class="ScriptHeader">
+  
+
+    <div class="rt-container">
+    	<div class="col-rt-12">
+        	<div class="rt-heading">
+            	<h1>User Request And Details Information of User</h1>
+                <p style="color: rgba(209, 3, 3, 0.836);">Please by checking the information in the below(
+                     if it's correct information click approve button)
+                     <br/>
+              (if Information is not correct click decline)
+                   </p>
+            </div>
+        </div>
+    </div>
+</header>
+<section>
+
+    <div class="rt-container">
+          <div class="col-rt-12">
+              <div class="Scriptcontent">
+              
+<!-- User Profile -->
+<% mrg_data.forEach(element=> {
+  var pid= element.uid;
+  var check = element.status;
+
+  %>
+<div class="student-profile py-4">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="card shadow-sm">
+          <div class="card-header bg-transparent text-center">
+            <img class="profile_img" src="../../../<%=element.userImgF%>" alt="student dp">
+            <h3><%= element.name%> <%= element.fathers_name %> <%=element.grand_fathers_name%></h3>
+          </div>
+          <div class="card-body">
+            <p class="mb-0"><strong class="pr-1">ID:</strong><%= pid %></p>
+            <p class="mb-0"><strong class="pr-1">Name:</strong><%= element.name%> <%= element.fathers_name %> <%=element.grand_fathers_name%></p>
+            <p class="mb-0"><strong class="pr-1">Requested for Marriage Certificate</strong></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-8">
+        <div class="card shadow-sm">
+          <div class="container">
+            <div class="card-group">
+      
+                <!--bootstrap card with 3 horizontal images-->
+                <div class="row">
+                    <div class="card col-md-6">
+                        <img class="card-img-top" src="../../../<%=element.mrgUserImgF%>">
+      
+                        <div class="card-body">
+                            <h3 class="card-title">Wife’s Picture</h3>
+                        </div>
+                    </div>
+      
+                    <div class="card col-md-6">
+                        <img class="card-img-top" src="../../../<%=element.mrgUserImgB%>">
+                          
+                        <div class="card-body">
+                            <h3 class="card-title text-primary">Husband’s Picture</h3>
+                        </div>
+                    </div>
+                      
+                    <!-- <div class="card col-md-4">
+                        <img class="card-img-top" src=
+    "https://media.geeksforgeeks.org/wp-content/cdn-uploads/20190623192118/Left-Bar-DSA-Self.png">
+                          
+                        <div class="card-body">
+                            <h3 class="card-title">DSA</h3>
+                            <p class="card-text">DS & Algo Course</p>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+          <!-- <img src="..." class="rounded float-left" alt="...">
+         <img src="..." class="rounded float-right" alt="..."> -->
+        </div>
+        </div>
+
+
+
+      <div class="col-lg-12 mt-5" id="detail_id">
+        <div class="card shadow-sm">
+          <div class="card-header bg-transparent border-0">
+            <h3 class="mb-0"><i class="far fa-clone pr-1"></i>General Information</h3>
+          </div>
+          <div class="card-body pt-0">
+            <table class="table table-bordered">
+              <tr>
+                <th width="30%">WIFE'S NAME</th>
+                <td width="2%">:</td>
+                <td><%= element.wifes_name%> <%= element.wifes_fathers_name %> <%=element.wifes_grand_fathers_name%></td>
+              </tr>
+              <tr>
+                <th width="30%">HUSBAND'S NAME</th>
+                <td width="2%">:</td>
+                <td><%= element.husbands_name%> <%= element.husbands_fathers_name %> <%=element.husbands_grand_fathers_name%></td>
+              </tr>
+              
+              <tr>
+                <th width="30%">PLACE of MARRIAGE</th>
+                <td width="2%">:</td>
+                <td><%=element.place_of_marriage%></td>
+              </tr>
+              <tr>
+                <th width="30%">PLACE of MARRIAGE REGISTRATION</th>
+                <td width="2%">:</td>
+                <td><%=element.place_of_marriage_registration%></td>
+              </tr>
+
+              <tr>
+                <th width="30%">WIFE'S CITIZENSHIP STATUS</th>
+                <td width="2%"></td>
+                <td><%=element.wifes_citizenship_status%></td>
+              </tr>
+
+              <tr>
+                <th width="30%">HUSBAND'S CITIZENSHIP STATUS</th>
+                <td width="2%"></td>
+                <td><%=element.husbands_citizenship_status%></td>
+              </tr>
+              
+              <tr>
+                <th width="30%">WIFE BIRTHDAY</th>
+                <td width="2%"></td>
+                <td><%=element.wifes_birthday%></td>
+              </tr>
+              <tr>
+                <th width="30%">HUSBAND BIRTHDAY</th>
+                <td width="2%"></td>
+                <td><%=element.husbands_birthday%></td>
+              </tr>
+              <tr>
+                <th width="30%">DATE of MARRIAGE</th>
+                <td width="2%"></td>
+                <td><%=element.date_of_marriage%></td>
+              </tr>
+              
+              <tr>
+                <th width="30%">DATE of MARRIAGE REGISTRATION</th>
+                <td width="2%"></td>
+                <td><%=element.date_of_marriage_registration%></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+          <div style="height: 26px"></div>
+        <div class="card shadow-sm">
+          <div class="card-header bg-transparent border-0">
+            <h3 class="mb-0"><i class="far fa-clone pr-1"></i>Other Information</h3>
+          </div>
+          <div class="card-body pt-0">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class=" flex-row align-self-end col-sm-12 text-center mt-5 ml-auto">
+          <% if(check === 'requested'){ %>
+            <a href="/login/request/reqdetail/mrgreq/approve/<%=pid%>" style="text-decoration: none;">
+              <button id="btnSearch" class="  btn btn-primary btn-md center-block" Style="width: 100px;"  >Approve</button>
+              </a> 
+              <a href="/login/request/reqdetail/mrgreq/decline/<%=pid%>" style="text-decoration: none;">
+              <button id="btnClear" class="btn btn-danger btn-md center-block" Style="width: 100px;"  >Decline</button>
+             </a>
+              <% } %>
+          
+              <% if(check === 'approved'){ %>
+                <a href="/login/request/reqdetail/mrgreq/approve/<%=pid%>" style="text-decoration: none;">
+                  <button id="btnSearch" class="  btn btn-primary btn-md center-block" Style="width: 200px; background-color: green;" OnClick="btnSearch_Click" >Approved Successfully</button>
+                  </a> <% } %>
+
+                  <% if(check === 'declined'){ %>
+                    <a href="" style="text-decoration: none;">
+                      <button id="btnSearch" class="  btn btn-primary btn-md center-block" Style="width: 200px; background-color: green;" OnClick="btnSearch_Click" >Request Declined</button>
+                      </a> <% } %>
+         
+        
+            </div>
+    </div>
+
+    </div>
+  </div>
+</div>
+<!-- partial -->
+           
+    		</div>
+		</div>
+    </div>
+    <% });%>
+
+</section>
+     
+
+
+    <!-- Analytics -->
+
+	</body>
+</html>

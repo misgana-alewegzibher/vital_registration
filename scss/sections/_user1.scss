@@ -1,0 +1,6 @@
+@use "../custom" as *;
+@use "../components/mixins" as *;
+
+.user1 {
+  @include gradient;
+}

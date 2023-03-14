@@ -1,0 +1,54 @@
+{
+  "name": "c",
+  "version": "1.0.0",
+  "description": "cbtp",
+  "main": "app.js",
+  "scripts": {
+    "compile:sass": "sass --watch scss:assets/css",
+    "start": "node index",
+    "dev": "nodemon index"
+  },
+  "keywords": [
+    "civil-registration",
+    "vital-event",
+    "wesagn-kunet",
+    "vital-registration",
+    "cbtp-jimmma"
+  ],
+  "author": "Misgana Alewegziabher",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.54.8"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.2.0",
+    "alert": "^5.1.4",
+    "autoprefixer": "^10.4.8",
+    "axios": "^1.2.2",
+    "body-parser": "^1.20.1",
+    "bootstrap": "^5.2.0",
+    "connect-mongo": "^4.6.0",
+    "dotenv": "^16.0.3",
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "express-handlebars": "^6.0.6",
+    "express-session": "^1.17.3",
+    "md5": "^2.3.0",
+    "method-override": "^3.0.0",
+    "moment": "^2.29.4",
+    "mongoose": "^6.8.3",
+    "mongoose-auto-increment": "^5.0.1",
+    "mongoose-encryption": "^2.1.2",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.5-lts.1",
+    "node-popup": "^0.1.14",
+    "nodemon": "^2.0.20",
+    "passport": "^0.6.0",
+    "passport-google-oauth20": "^2.0.0",
+    "popup": "^0.0.3",
+    "popup-prompt": "^1.1.5",
+    "popups": "^1.1.3",
+    "postcss-cli": "^10.0.0",
+    "puppeteer": "^19.6.3"
+  }
+}

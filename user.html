@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/fontawesome.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/vendors/css/glightbox.min.css" />
+  </head>
+  <body>
+    <section class="user1">
+      <form action="/palceholder" method="POST">
+        <div class="container py-5 h-100">
+          <div
+            class="row d-flex justify-content-center align-items-center h-100"
+          >
+            <div class="col-12">
+              <div class="card bg-dark text-white" style="border-radius: 1rem">
+                <div class="card-body p-5 text-center">
+
+               <!-- upload childs photo (birthday)  -->
+
+
+                  <div class="container col-md-6">
+                    <div class="mb-5">
+                        <label for="Image" class="form-label ">upload photo </label>
+                        
+                        <input class="form-control" type="file" id="birthpic1" onchange="preview()">
+
+                        <!-- future misgana repurpose button to submitt  -->
+
+                        <div class="m-3">
+                        <button onclick="clearImage()" class="btn btn-outline-light btn-lg px-5">Click me</button>
+                    </div>
+                  </div>
+                    <img id="frame1" src="" class="img-fluid" />
+                </div>
+
+
+
+                  <div class="mb-md-5 mt-md-4 pb-5">
+                    <h2 class="fw-bold mb-2 text-uppercase">birthday</h2>
+                    <p class="text-white-50 mb-5">
+                      Please enter your birthday information
+                    </p>
+<div class="row">
+                    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+
+                    <div class="form-outline form-white mb-4">
+                      <input
+                        type="text"
+                        id="birthtext1"
+                        name="birthtext1"
+                        class="form-control form-control-lg"
+                      />
+                      <label class="form-label" for="typeEmailX">NAME</label>
+                    </div>
+                  </div>
+                    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+
+                    <div class="form-outline form-white mb-4">
+                      <input
+                        type="text"
+                        id="birthtext2"
+                        name="birthtext2"
+                        class="form-control form-control-lg"
+                      />
+                      <label class="form-label" for="typeEmailX"
+                        >FATHERS NAME</label
+                      >
+                    </div>
+                  </div>
+
+                     <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+
+                    <div class="form-outline form-white mb-4">
+                      <input
+                        type="text"
+                        id="birthtext3"
+                        name="birthtext3"
+                        class="form-control form-control-lg"
+                      />
+                      <label class="form-label" for="typeEmailX"
+                        >GRAND FATHER'S NAME</label
+                      >
+                    </div>
+                  </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                    <div class="form-outline form-white mb-4">
+                      <input
+                        type="text"
+                        id="birthtext4"
+                        name="birthtext4"
+                        class="form-control form-control-lg"
+                      />
+                      <label class="form-label" for="typeEmailX"
+                        >MOTHERS FULL NAME</label
+                      >
+                    </div>
+                  </div>
+
+                    <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+
+                    <div class="form-outline form-white mb-4">
+                      <input
+                        type="text"
+                        id="birthtext5"
+                        name="birthtext5"
+                        class="form-control form-control-lg"
+                      />
+                      <label class="form-label" for="typeEmailX"
+                        >PLACE/COUNTRY OF BIRTH</label
+                      >
+                    </div>
+                  </div>
+
+                    <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+
+                      
+                    <div class="form-outline form-white mb-4">
+                      <input
+                        type="text"
+                        id="birthtext6"
+                        name="birthtext6"
+                        class="form-control form-control-lg"
+                      />
+                      <label class="form-label" for="typeEmailX"
+                        >REGION/CITY ADMINSTRATION</label
+                      >
+                    </div>
+                  </div>
+
+                    <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                    <div class="form-outline form-white mb-4">
+                      <input
+                        type="text"
+                        id="birthtext7"
+                        name="birthtext7"
+                        class="form-control form-control-lg"
+                      />
+                      <label class="form-label" for="typeEmailX"
+                        >ZONE/CITY ADMINSTRATION</label
+                      >
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="row text-center mt-0 mb-3">
+                      <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" >
+                        <div class="form-check form-white mb-4">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="flexRadioDefault"
+                            id="flexRadioDefault1"
+                          />
+                          <label
+                            class="form-check-label"
+                            for="flexRadioDefault1"
+                          >
+                            MALE
+                          </label> </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" >
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="flexRadioDefault"
+                            id="flexRadioDefault2"
+                            checked
+                          />
+                          <label
+                            class="form-check-label"
+                            for="flexRadioDefault2"
+                          >
+                            FEMALE
+                          </label>
+                        </div>
+                        </div>
+
+                        <div class="row">
+
+                          <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" >
+                        <div class="form-check form-white mb-4">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="flexRadioDefault2"
+                            id="flexRadioDefault11"
+                          />
+                          <label
+                            class="form-check-label"
+                            for="flexRadioDefault11"
+                          >
+                            CITIZEN
+                          </label>
+                        </div>
+
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" >
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="flexRadioDefault2"
+                            id="flexRadioDefault22"
+                            checked
+                          />
+                          <label
+                            class="form-check-label"
+                            for="flexRadioDefault22"
+                          >
+                            FOREIGNER
+                          </label>
+                        </div>
+                        
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                      <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <div class="p-sm-1">
+                        <label for="birthday">DATE OF BIRTHDAY</label>
+                      </div>
+                        <input
+                          type="date"
+                          id="birthdaycl1"
+                          name="birthdaycl1"
+                          value="2012-12-12"
+                        />
+                      </div>
+
+                      <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <div class="p-sm-1">                        <label for="birthday"
+                          >DATE OF BIRTHDAY REGISTRATION
+                        </label>
+                      </div>
+
+                        <input
+                          type="date"
+                          id="birthdaycl2"
+                          name="birthdaycl2"
+                          value="2012-12-12"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                    <button
+                      class="btn btn-outline-light btn-lg px-5"
+                      type="submit"
+                    >
+                      SUBMIT
+                    </button>
+
+                    <div
+                      class="d-flex justify-content-center text-center mt-4 pt-1"
+                    >
+                      <a
+                        href="https://www.facebook.com/wesagn.kunet/"
+                        class="text-white"
+                        ><i class="fab fa-facebook-f fa-lg"></i
+                      ></a>
+                      <a href="#!" class="text-white"
+                        ><i class="fab fa-twitter fa-lg mx-4 px-2"></i
+                      ></a>
+                      <a href="#!" class="text-white"
+                        ><i class="fab fa-google fa-lg"></i
+                      ></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+
+      <!-- test another from here -->
+      <!-- test another from here -->
+      <!-- test another from here -->
+      <!-- test another from here -->
+      <!-- death -->
+
+      <form action="/palceholder" method="POST">
+        <div class="container py-5 h-100">
+          <div
+            class="row d-flex justify-content-center align-items-center h-100"
+          >
+            <div class="col-12">
+              <div class="card bg-dark text-white" style="border-radius: 1rem">
+                <div class="card-body p-5 text-center">
+                  <div class="mb-md-5 mt-md-4 pb-5">
+                    <h2 class="fw-bold mb-2 text-uppercase">DEATH</h2>
+                    <p class="text-white-50 mb-5">
+                      Please fill the death certificate form
+                    </p>
+
+                    <div class="row">
+                      <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                        <div class="form-outline form-white mb-4">
+                          <input
+                            type="text"
+                            id="deathtext1"
+                            name="deathtext1"
+                            class="form-control form-control-lg"
+                          />
+                          <label class="form-label" for="typeEmailX">
+                            DECEASED'S NAME</label
+                          >
+                        </div>
+                      </div>
+                      <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                        <div class="form-outline form-white mb-4">
+                          <input
+                            type="text"
+                            id="deathtext2"
+                            name="deathtext2"
+                            class="form-control form-control-lg"
+                          />
+                          <label class="form-label" for="typeEmailX"
+                            >FATHERS NAME</label
+                          >
+                        </div>
+                      </div>
+                      <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                        <div class="form-outline form-white mb-4">
+                          <input
+                            type="text"
+                            id="deathtext3"
+                            name="deathtext3"
+                            class="form-control form-control-lg"
+                          />
+                          <label class="form-label" for="typeEmailX"
+                            >GRAND FATHER'S NAME</label
+                          >
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-lg-6 col-md-6 col-sm-12 col-sx-12">
+                        <div class="form-outline form-white mb-4">
+                          <input
+                            type="text"
+                            id="deathtext4"
+                            name="deathtext4"
+                            class="form-control form-control-lg"
+                          />
+                          <label class="form-label" for="typeEmailX"
+                            >TITLE OF THE DECEASED
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-lg-6 col-md-6 col-sm-12 col-sx-12">
+                        <div class="form-outline form-white mb-4">
+                          <input
+                            type="text"
+                            id="deathtext5"
+                            name="deathtext5"
+                            class="form-control form-control-lg"
+                          />
+                          <label class="form-label" for="typeEmailX"
+                            >PLACE OF DEATH</label
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row text-center mt-0 mb-3">
+                      <div class="col-lg-3">
+                        <div class="form-check form-white mb-4">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="flexRadioDefault3"
+                            id="flexRadioDefault30"
+                          />
+                          <label
+                            class="form-check-label"
+                            for="flexRadioDefault30"
+                          >
+                            MALE
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="flexRadioDefault3"
+                            id="flexRadioDefault31"
+                            checked
+                          />
+                          <label
+                            class="form-check-label"
+                            for="flexRadioDefault31"
+                          >
+                            FEMALE
+                          </label>
+                        </div>
+                      </div>
+
+                      <div class="col-lg-3">
+                        <div class="form-check form-white mb-4">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="flexRadioDefault4"
+                            id="flexRadioDefault40"
+                          />
+                          <label
+                            class="form-check-label"
+                            for="flexRadioDefault40"
+                          >
+                            CITIZEN
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="flexRadioDefault4"
+                            id="flexRadioDefault41"
+                            checked
+                          />
+                          <label
+                            class="form-check-label"
+                            for="flexRadioDefault41"
+                          >
+                            FOREIGNER
+                          </label>
+                        </div>
+                      </div>
+ </div>
+ <div class="row text-center mt-sm-5 mb-3">
+                      <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <div class="p-sm-1">
+                        <label for="birthday">DATE OF DEATH 
+                        </div>
+                        </label>
+                        <input type="date" id="deathcl1" name="deathcl1"
+                        value="2012-12-12" />
+                        
+                      </div>
+
+                      <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <div class="p-sm-1">
+                        <label for="birthday"
+                          >DATE OF DEATH REGISTRATION
+                        </label>
+                        </div>
+
+                        <input
+                          type="date"
+                          id="birthdaycl2"
+                          name="birthdaycl2"
+                          value="2012-12-12"
+                        />
+                      </div>
+                   </div>
+
+                    <button
+                      class="btn btn-outline-light btn-lg px-5"
+                      type="submit"
+                    >
+                      SUBMIT
+                    </button>
+
+                    <div
+                      class="d-flex justify-content-center text-center mt-4 pt-1"
+                    >
+                      <a
+                        href="https://www.facebook.com/wesagn.kunet/"
+                        class="text-white"
+                        ><i class="fab fa-facebook-f fa-lg"></i
+                      ></a>
+                      <a href="#!" class="text-white"
+                        ><i class="fab fa-twitter fa-lg mx-4 px-2"></i
+                      ></a>
+                      <a href="#!" class="text-white"
+                        ><i class="fab fa-google fa-lg"></i
+                      ></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+
+      <!-- marriage form -->
+
+      <!-- marriage form -->
+
+      <!-- marriage form -->
+
+      <form action="/palceholder" method="POST">
+        <div class="container py-5 h-100">
+          <div
+            class="row d-flex justify-content-center align-items-center h-100"
+          >
+            <div class="col-12">
+              <div class="card bg-dark text-white" style="border-radius: 1rem">
+                <div class="card-body p-5 text-center">
+                  <div class="mb-md-5 mt-md-4 pb-5">
+                    <h2 class="fw-bold mb-2 text-uppercase">MARRIAGE</h2>
+                    <p class="text-white-50 mb-5">
+                      Please fill the marriage certificate form
+                    </p>
+
+                    <div class="container col-md-6">
+                      <div class="mb-5">
+                          <label for="Image" class="form-label "> UPLOAD WIFE'S PHOTO </label>
+                          
+                          <input class="form-control" type="file" id="marriagepic1" onchange="preview()">
+  
+                          <!-- future misgana repurpose button to submitt  -->
+  
+                          <div class="m-3">
+                          <button onclick="clearImage()" class="btn btn-outline-light btn-lg px-5">Click me</button>
+                      </div>
+                    </div>
+                      <img id="frame2" src="" class="img-fluid" />
+                  </div>
+
+
+                  <div class="container col-md-6">
+                    <div class="mb-5">
+                        <label for="Image" class="form-label ">UPLOAD HUSBAND'S PHOTO </label>
+                        
+                        <input class="form-control" type="file" id="marriagepic2" onchange="preview()">
+
+                        <!-- future misgana repurpose button to submitt  -->
+
+                        <div class="m-3">
+                        <button onclick="clearImage()" class="btn btn-outline-light btn-lg px-5">Click me</button>
+                    </div>
+                  </div>
+                    <img id="frame3" src="" class="img-fluid" />
+                </div>
+
+
+
+                    <div class="row">
+                      <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                        <div class="form-outline form-white mb-4">
+                          <input
+                            type="text"
+                            id="marriagetext1"
+                            name="marriagetext1"
+                            class="form-control form-control-lg"
+                          />
+                          <label class="form-label" for="typeEmailX">
+                            WIFE'S NAME</label
+                          >
+                        </div>
+                      </div>
+                      <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                        <div class="form-outline form-white mb-4">
+                          <input
+                            type="text"
+                            id="marriagetext2"
+                            name="marriagetext2"
+                            class="form-control form-control-lg"
+                          />
+                          <label class="form-label" for="typeEmailX"
+                            >FATHERS NAME</label
+                          >
+                        </div>
+                      </div>
+
+                      <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                        <div class="form-outline form-white mb-4">
+                          <input
+                            type="text"
+                            id="marriagetext3"
+                            name="marriagetext3"
+                            class="form-control form-control-lg"
+                          />
+                          <label class="form-label" for="typeEmailX"
+                            >GRAND FATHER'S NAME</label
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                        <div class="form-outline form-white mb-4">
+                          <input
+                            type="text"
+                            id="marriagetext4"
+                            name="marriagetext4"
+                            class="form-control form-control-lg"
+                          />
+                          <label class="form-label" for="typeEmailX">
+                            HUSBAND'S NAME</label
+                          >
+                        </div>
+                      </div>
+                      <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                        <div class="form-outline form-white mb-4">
+                          <input
+                            type="text"
+                            id="marriagetext5"
+                            name="marriagetext5"
+                            class="form-control form-control-lg"
+                          />
+                          <label class="form-label" for="typeEmailX"
+                            >FATHERS NAME</label
+                          >
+                        </div>
+                      </div>
+
+                      <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                        <div class="form-outline form-white mb-4">
+                          <input
+                            type="text"
+                            id="marriagetext6"
+                            name="marriagetext6"
+                            class="form-control form-control-lg"
+                          />
+                          <label class="form-label" for="typeEmailX"
+                            >GRAND FATHER'S NAME</label
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <div class="form-outline form-white mb-4">
+                          <input
+                            type="text"
+                            id="marriagetext7"
+                            name="marriagetext7"
+                            class="form-control form-control-lg"
+                          />
+                          <label class="form-label" for="typeEmailX"
+                            >PLACE OF MARRIAGE 
+                          </label>
+                        </div>
+                      </div>
+
+                      <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <div class="form-outline form-white mb-4">
+                          <input
+                            type="text"
+                            id="marriagetext8"
+                            name="marriagetext8"
+                            class="form-control form-control-lg"
+                          />
+                          <label class="form-label" for="typeEmailX"
+                            >PLACE OF MARRIAGE REGISTRATION</label
+                          >
+                        </div>
+                      </div>
+                      
+                    </div>
+                 
+                      <div class="row">
+                      <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                        <div class="form-check form-white mb-4">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="flexRadioDefault6"
+                            id="flexRadioDefault50"
+                          />
+                          <label
+                            class="form-check-label"
+                            for="flexRadioDefault50"
+                          >
+                            wife is a citizen
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="flexRadioDefault6"
+                            id="flexRadioDefault51"
+                            checked
+                          />
+                          <label
+                            class="form-check-label"
+                            for="flexRadioDefault51"
+                          >
+                            wife is a foreigner
+                          </label>
+                        </div>
+                      </div>
+                      
+
+                      <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                        <div class="form-check form-white mb-4">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="flexRadioDefault7"
+                            id="flexRadioDefault60"
+                          />
+                          <label
+                            class="form-check-label"
+                            for="flexRadioDefault60"
+                          >
+                            husband is a citizen
+                          </label>
+                        </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="flexRadioDefault7"
+                            id="flexRadioDefault61"
+                            checked
+                          />
+                          <label
+                            class="form-check-label"
+                            for="flexRadioDefault61"
+                          >
+                            husband is a foreigner
+                          </label>
+                        </div>
+                      </div></div>
+                      
+         <div class="row ">
+                      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                        <label for="birthday"> wife's birthday</label>
+                        <input
+                          type="date"
+                          id="marriagecl1"
+                          name="marriagecl1"
+                          value="2012-12-12"
+                        />
+                      </div>
+
+                      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                        <label for="birthday">husband's birthday </label>
+                        <input
+                          type="date"
+                          id="marriagecl2"
+                          name="marriagecl2"
+                          value="2012-12-12"
+                        />
+                      </div>
+                 
+
+                      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                      <label for="birthday">date of marriage </label>
+                      <input
+                        type="date"
+                        id="marriagecl3"
+                        name="marriagecl3 "
+                        value="2012-12-12"
+                      />
+                    </div>
+                  </div>
+                  </div>
+
+                </div>
+                <div class="col-12 text-center">                    <button
+                      class="btn btn-outline-light btn-lg px-5"
+                      type="submit"
+                    >
+                      SUBMIT
+                    </button>
+                  </div>
+
+
+                    <div
+                      class="d-flex justify-content-center text-center mt-4 pt-1"
+                    >
+                      <a
+                        href="https://www.facebook.com/wesagn.kunet/"
+                        class="text-white"
+                        ><i class="fab fa-facebook-f fa-lg"></i
+                      ></a>
+                      <a href="#!" class="text-white"
+                        ><i class="fab fa-twitter fa-lg mx-4 px-2"></i
+                      ></a>
+                      <a href="#!" class="text-white"
+                        ><i class="fab fa-google fa-lg"></i
+                      ></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </section>
+
+
+
+    <!-- javascritp for birthday photo upload  -->
+
+    <script>
+      function preview() {
+          frame1.src = URL.createObjectURL(event.target.files[0]);
+      }
+      function clearImage() {
+          document.getElementById('birthpic1').value = null;
+          frame1.src = "";
+      }
+  </script>
+
+<script>
+  function preview() {
+      frame2.src = URL.createObjectURL(event.target.files[1]);
+  }
+  function clearImage() {
+      document.getElementById('marriagepic1').value = null;
+      frame2.src = "";
+  }
+</script>
+
+<script>
+  function preview() {
+      frame3.src = URL.createObjectURL(event.target.files[2]);
+  }
+  function clearImage() {
+      document.getElementById('marriagepic2').value = null;
+      frame3.src = "";
+  }
+</script>
+
+
+
+  </body>
+</html>
